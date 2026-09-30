@@ -1,0 +1,57 @@
+=== SISTEMA PETCARE ===
+[LOGIN] Veterinario: true
+[USUARIO] Usuario demonstracao | Perfil: RECEP
+[ADMIN] Ana Administradora
+[VETERINARIO] Ana Veterinaria | CRMV: CRMV-123
+[RECEPCIONISTA] Bia Recepcao | Ramal: 101
+[TUTOR] Joao Silva | CPF: 12345678900
+[ANIMAL] Rex | Labrador | Tutor: Joao Silva
+[CADASTRO] Busca por CPF: Joao Silva
+[CADASTRO] Busca por codigo: Rex
+[ANIMAL] Idade: 3
+[NOTIFICADOR] EMAIL -> admin@petcare.com: Estoque baixo: Anestesico demonstrativo
+[NOTIFICADOR] EMAIL -> joao@email.com: Agendamento confirmado: CONSULTA
+[NOTIFICADOR] EMAIL -> joao@email.com: Agendamento reagendado para 2026-09-30 09:30
+[NOTIFICADOR] EMAIL -> joao@email.com: Agendamento confirmado: CONSULTA
+[NOTIFICADOR] EMAIL -> joao@email.com: Agendamento confirmado: EXAME
+[NOTIFICADOR] EMAIL -> joao@email.com: Agendamento confirmado: CIRURGIA
+[ESTOQUE] Anestesico demonstrativo | Qtd: 30 | Reservada: 2 | Minimo: 10 -> OK
+[NOTIFICADOR] EMAIL -> joao@email.com: Agendamento confirmado: CONSULTA
+[NOTIFICADOR] EMAIL -> joao@email.com: Agendamento cancelado: CONSULTA
+[AGENDA] 5 registros com historico
+2026-09-30T11:12:53.097432972 | Agendado em 2026-09-30 09:00
+2026-09-30T11:12:53.098379492 | Reagendado de 2026-09-30 09:00 para 2026-09-30 09:30
+2026-09-30T11:12:53.098604942 | Procedimento concluido
+[AGENDAMENTO] 2026-09-30 09:30 | Tipo: CONSULTA | Status: CONCLUIDO
+[VACINA] Precisa reforco: true
+[NOTIFICADOR] EMAIL -> joao@email.com: Vacina de Rex em 2026-09-29
+[REGISTRO] 106 | 2026-09-30 | Observacao geral
+[CONSULTA] Avaliacao clinica | Motivo: Rotina
+[CONSULTA] Reavaliacao | Motivo: Retorno
+[VACINA] Antirrabica | Reforco: 2026-09-29
+[CIRURGIA] Sala: Sala cirurgica | Duracao: 120 min
+[EXAME] Tipo: Laboratorial | Resultado: Sem alteracoes
+[TRATAMENTO] Acompanhamento por 5 dias
+[HISTORICO] Consultas: 2 | Vacinas: 1 | Cirurgias: 1
+[HISTORICO] Consultas: 2 | Vacinas: 1 | Cirurgias: 1
+[NOTIFICADOR] EMAIL -> joao@email.com: Fatura simulada R$150.00 | BOLETO-SIMULADO-SIP-400 | https://petcare.example/pagamento/400
+[FATURA] Valor: R$150,00 | Status: PENDENTE
+[NOTIFICADOR] EMAIL -> joao@email.com: Fatura simulada R$150.00 | BOLETO-SIMULADO-SIP-400 | https://petcare.example/pagamento/400
+[PAGAMENTO SIMULADO] true
+[NOTIFICADOR] EMAIL -> joao@email.com: Fatura simulada R$250.00 | BOLETO-SIMULADO-SIP-401 | https://petcare.example/pagamento/401
+[FATURAS] 2
+[RELATORIO] 9/2026 | Atendimentos: 4 | Faturamento: R$400,00 | Recebido: R$150,00 | Despesas: R$40,00 | Retorno: 25,0% | Media: 52,5 min | Mais realizado: CONSULTA
+[RELATORIO] Exportado: relatorios/petcare-2026-09.txt
+[ESTOQUE] Anestesico demonstrativo | Qtd: 28 | Reservada: 0 | Minimo: 10 -> OK
+2026-09-30T11:12:53.087287997 | SAIDA | Item: 300 | Lote: LOT-2026 | Validade: 2027-03-30 | Qtd: 45 | Responsavel: Ana Veterinaria
+2026-09-30T11:12:53.095344327 | ENTRADA | Item: 300 | Lote: LOT-2026 | Validade: 2027-03-30 | Qtd: 20 | Responsavel: Ana Administradora
+2026-09-30T11:12:53.095389906 | AJUSTE_SALDO | Item: 300 | Lote: LOT-2026 | Validade: 2027-03-30 | Qtd: 30 | Responsavel: Ana Administradora
+2026-09-30T11:12:53.101237999 | RESERVA | Item: 300 | Lote: LOT-2026 | Validade: 2027-03-30 | Qtd: 2 | Responsavel: Sistema
+2026-09-30T11:12:53.106707110 | CONSUMIR_RESERVA | Item: 300 | Lote: LOT-2026 | Validade: 2027-03-30 | Qtd: 2 | Responsavel: Ana Veterinaria
+2026-09-30T11:12:53.107273596 | RESERVA | Item: 300 | Lote: LOT-2026 | Validade: 2027-03-30 | Qtd: 1 | Responsavel: Sistema
+2026-09-30T11:12:53.108045422 | LIBERAR_RESERVA | Item: 300 | Lote: LOT-2026 | Validade: 2027-03-30 | Qtd: 1 | Responsavel: Sistema
+[LOG] 2026-09-30T11:12:53.143413335 | Usuario: Ana Administradora | Acao: DEMONSTRACAO | Entidade: Sistema #0
+[AUDITORIA] Logs do administrador: 2
+[AUDITORIA] Total: 30
+[REGRA] Historico finalizado bloqueou nova insercao.
+=== DEMONSTRACAO CONCLUIDA ===
